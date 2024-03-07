@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "chat.v1;chatv1";
+
+service Chat {
+  rpc SendAndGetMessage (stream Message) returns (stream Message) {}
+}
+
+message Message {
+  string message = 1;
+}
