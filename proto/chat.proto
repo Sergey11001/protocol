@@ -10,4 +10,6 @@ service Chat {
 
 message Message {
   string message = 1;
+  string sender = 2;
+  string receiver = 3;
 }
